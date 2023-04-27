@@ -1,6 +1,6 @@
 const screen = document.querySelector(".screen");
 const keys = document.querySelectorAll(".key");
-const operators = ["+", "-", "/", "*"];
+const operators = ["+", "-", "/", "*", "."];
 
 
 screen.textContent = '';
