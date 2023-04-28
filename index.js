@@ -8,7 +8,9 @@ screen.textContent = '';
 keys.forEach(key => key.addEventListener("click", () => {
 
     if (!key.classList.contains("special")) {
-    screen.textContent += key.textContent;
+        if (screen.textContent.length < 22) {
+            screen.textContent += key.textContent;
+        }
     }
     else if (key.classList.contains("special")){
         if (key.textContent == "=") {
@@ -24,7 +26,9 @@ keys.forEach(key => key.addEventListener("click", () => {
 }));
 document.addEventListener("keydown", (event) => {
     if (!isNaN(event.key) ) {
-    screen.textContent += event.key;
+        if (screen.textContent.length < 22) {
+            screen.textContent += event.key;
+        }
     }
     
     else{
@@ -45,4 +49,3 @@ document.addEventListener("keydown", (event) => {
     }
 }
 });
-
